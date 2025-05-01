@@ -45,10 +45,13 @@ class FleetManagementMenu():
 class CreateNewShipment():
     def __init__(self, test_data, vehicle_data, customer_data):
         print("Hello Create a new shipment")
-        self.test_data = test_data
-        self.vehicle_data = vehicle_data
-        self.customer_data = customer_data
-        self.checkShipmentID()
+        try:
+            self.test_data = test_data
+            self.vehicle_data = vehicle_data
+            self.customer_data = customer_data
+            self.checkShipmentID()
+        except TypeError:
+            print("Someting bad happend")
 
     def showAvailableVehicles(self, test_data):
         print("\n =========== VEHICLES FLEET LIST ==============")
